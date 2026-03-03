@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookStore</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#catalog">📚 BookStore</a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#cart">Кошик</a></li>
+        <li><a href="#account">Мій акаунт</a></li>
+      </ul>
+    </nav>
+
+    <input class="search" type="search" placeholder="Пошук книги або автора" />
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Знайди свою наступну улюблену книгу</h1>
+      <p>Популярні бестселери та класика з реальними обкладинками (ISBN).</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#catalog">Перейти в каталог</a>
+        <a class="btn ghost" href="#account">Мій акаунт</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <section id="catalog" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Каталог</h2>
+        <div class="filters">
+          <select aria-label="Жанр">
+            <option>Усі жанри</option>
+            <option>Фантастика</option>
+            <option>Класика</option>
+            <option>Роман</option>
+          </select>
+
+          <select aria-label="Сортування">
+            <option>Сортування: Популярні</option>
+            <option>Ціна ↑</option>
+            <option>Ціна ↓</option>
+            <option>Рейтинг</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Flexbox grid -->
+      <div class="book-grid">
+
+        <article class="book-card">
+          <img class="cover" src="https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg" alt="The Hobbit cover">
+          <div class="book-body">
+            <h3>The Hobbit</h3>
+            <p class="meta">J.R.R. Tolkien</p>
+            <div class="row">
+              <span class="price">399 грн</span>
+              <span class="rating">⭐ 4.9</span>
+            </div>
+            <button class="btn primary full" type="button">Додати в кошик</button>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <img class="cover" src="https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg" alt="1984 cover">
+          <div class="book-body">
+            <h3>1984</h3>
+            <p class="meta">George Orwell</p>
+            <div class="row">
+              <span class="price">289 грн</span>
+              <span class="rating">⭐ 4.8</span>
+            </div>
+            <button class="btn primary full" type="button">Додати в кошик</button>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <img class="cover" src="https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg" alt="To Kill a Mockingbird cover">
+          <div class="book-body">
+            <h3>To Kill a Mockingbird</h3>
+            <p class="meta">Harper Lee</p>
+            <div class="row">
+              <span class="price">329 грн</span>
+              <span class="rating">⭐ 4.7</span>
+            </div>
+            <button class="btn primary full" type="button">Додати в кошик</button>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <img class="cover" src="https://covers.openlibrary.org/b/isbn/9780140449136-L.jpg" alt="The Odyssey cover">
+          <div class="book-body">
+            <h3>The Odyssey</h3>
+            <p class="meta">Homer</p>
+            <div class="row">
+              <span class="price">310 грн</span>
+              <span class="rating">⭐ 4.6</span>
+            </div>
+            <button class="btn primary full" type="button">Додати в кошик</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- КОШИК -->
+  <section id="cart" class="section alt">
+    <div class="container">
+      <h2>Кошик</h2>
+
+      <div class="cart">
+        <div class="cart-row head">
+          <div>Товар</div>
+          <div>К-сть</div>
+          <div>Ціна</div>
+          <div></div>
+        </div>
+
+        <div class="cart-row">
+          <div class="cart-product">
+            <img class="cart-cover" src="https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg" alt="1984 cover small">
+            <div>
+              <div class="cart-title">1984</div>
+              <div class="meta">George Orwell</div>
+            </div>
+          </div>
+          <div><input class="qty" type="number" value="1" min="1"></div>
+          <div class="cart-price">289 грн</div>
+          <div><button class="btn danger" type="button">Видалити</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- МІЙ АКАУНТ -->
+  <section id="account" class="section">
+    <div class="container">
+      <h2>Мій акаунт</h2>
+
+      <div class="account">
+        <article class="panel">
+          <h3>Профіль</h3>
+          <p><strong>Ім’я:</strong> Іван Петренко</p>
+          <p><strong>Email:</strong> ivan@email.com</p>
+        </article>
+
+        <article class="panel">
+          <h3>Історія покупок</h3>
+          <ul>
+            <li>1984 — 289 грн</li>
+            <li>The Hobbit — 399 грн</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h3>Налаштування</h3>
+          <label class="check">
+            <input type="checkbox" checked>
+            <span>Отримувати email-сповіщення</span>
+          </label>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>📞 +380 00 000 0000</p>
+    <p>📧 support@bookstore.ua</p>
+  </div>
+</footer>
+
+</body>
+</html>
